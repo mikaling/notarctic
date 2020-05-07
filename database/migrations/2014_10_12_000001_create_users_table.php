@@ -15,19 +15,15 @@ class CreateUsersTable extends Migration
     {
         Schema::create('user', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_type_id');
-            $table->string('first_name');
-            $table->string('last_name');
+            $table->string('name');
             $table->string('email')->unique();
+            $table->boolean('is_admin')->default(false);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
 
-            $table->foreign('user_type_id')
-                ->references('id')
-                ->on('user_type')
-                ->onDelete('cascade');
+
         });
     }
 
