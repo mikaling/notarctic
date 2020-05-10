@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes(['verify'=>true]);
+
+Route::get('admin', ['middleware'=>'isadmin',function () {
+    return view('admin');
+}])->middleware('verified');
+
+Route::get('user', ['middleware'=>'auth' ,function () {
+    return view('user');
+}])->middleware('verified');
+Auth::routes();
+
+
