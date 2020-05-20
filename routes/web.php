@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Auth::routes(['verify'=>true]);
+
 
 Route::get('admin', ['middleware'=>'isadmin',function () {
     return view('admin');
