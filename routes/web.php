@@ -28,4 +28,8 @@ Route::get('user', ['middleware'=>'auth' ,function () {
 }])->middleware('verified');
 Auth::routes();
 
+Route::get('checkout', function () {
+    return view('checkout');
+});
+// TODO: POST method checkout route
 

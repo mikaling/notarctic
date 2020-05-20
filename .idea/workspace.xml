@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebbfbff0-0ba8-48cf-af37-5d5bdd865c7f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MpesaController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/checkout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +20,11 @@
     </execution>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Auth" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -158,6 +167,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="883" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590004912771">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="883" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1590004912771" />
     <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1589560619009">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -174,6 +187,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589560619009" />
+    <state x="942" y="246" key="NewPhpClassDialog" timestamp="1590004776242">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="942" y="246" key="NewPhpClassDialog/0.0.1536.864@0.0.1536.864" timestamp="1590004776242" />
     <state x="465" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1589994444833">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
