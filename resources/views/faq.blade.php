@@ -49,7 +49,7 @@
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div class="card-body">
-        Here to serve.
+        We sell computers and its componets and also repair computers.
       </div>
     </div>
   </div>
@@ -77,7 +77,7 @@
     </div>
     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
       <div class="card-body">
-        Sthg sthg number.
+        All our contact information can be found at the bottom of the page.
       </div>
     </div>
   </div>
@@ -85,13 +85,42 @@
     <div class="card-header" id="headingFive">
       <h2 class="mb-0">
         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-          To shreds you say?
+           My item arrived damaged. Can I get a replacement?
         </button>
       </h2>
     </div>
     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
       <div class="card-body">
-        Nobody expects the Spanish Inquisition.
+        Yes you can. Kindly send us an email with the full details of your purchase.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingFive">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+           When will my replacement be shipped?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+      <div class="card-body">
+Subject to material availability, repairs covered by the warranty will be carried out within 15 days of receipt of the product and shipped back to the owner at Arctic’s expense. 
+ Repair of items not covered by warranty will be by an estimate approved by the customer before work begins.
+       </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingFive">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+          How do I return or refund an order?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+      <div class="card-body">
+        We have a no refund policy.
       </div>
     </div>
   </div>
@@ -100,3 +129,4 @@
 </div>
 </section>
 @endsection
+
