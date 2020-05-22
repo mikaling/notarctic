@@ -84,7 +84,7 @@
   <div class="card">
     <div class="card-header" id="headingFive">
       <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
            My item arrived damaged. Can I get a replacement?
         </button>
       </h2>
@@ -96,29 +96,29 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-header" id="headingFive">
+    <div class="card-header" id="headingSix">
       <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
            When will my replacement be shipped?
         </button>
       </h2>
     </div>
-    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
       <div class="card-body">
-Subject to material availability, repairs covered by the warranty will be carried out within 15 days of receipt of the product and shipped back to the owner at Arctic’s expense. 
+Subject to material availability, repairs covered by the warranty will be carried out within 15 days of receipt of the product and shipped back to the owner at Arctic’s expense.
  Repair of items not covered by warranty will be by an estimate approved by the customer before work begins.
        </div>
     </div>
   </div>
   <div class="card">
-    <div class="card-header" id="headingFive">
+    <div class="card-header" id="headingSeven">
       <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
           How do I return or refund an order?
         </button>
       </h2>
     </div>
-    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
       <div class="card-body">
         We have a no refund policy.
       </div>
@@ -129,4 +129,3 @@ Subject to material availability, repairs covered by the warranty will be carrie
 </div>
 </section>
 @endsection
-
