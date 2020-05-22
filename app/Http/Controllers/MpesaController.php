@@ -25,7 +25,7 @@ class MpesaController extends Controller
     /**
      * Lipa na M-PESA STK Push method
      * */
-    public function customerMpesaSTKPush()
+    public function customerMpesaSTKPush(Request $request)
     {
         $url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
         $curl = curl_init();
@@ -38,9 +38,9 @@ class MpesaController extends Controller
             'Timestamp' => Carbon::rawParse('now')->format('YmdHms'),
             'TransactionType' => 'CustomerPayBillOnline',
             'Amount' => 5, // transaction amount
-            'PartyA' => 254700649385, // replace this with your phone number
+            'PartyA' => $request->input('number'), // user phone number
             'PartyB' => 174379,
-            'PhoneNumber' => 254700649385, // replace this with your phone number
+            'PhoneNumber' => $request->input('number'), // user phone number
             'CallBackURL' => 'https://blog.hlab.tech/',
             'AccountReference' => "laravel mpesa demo",
             'TransactionDesc' => "Testing stk push on sandbox"

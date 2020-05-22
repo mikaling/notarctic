@@ -133,7 +133,7 @@
                                 <li><a href="#">Shipping <span>Flat rate: $50.00</span></a></li>
                                 <li><a href="#">Total <span>$2210.00</span></a></li>
                             </ul>
-                            <form action="/checkout" method="post">
+                            <form action="api/mpesa/push" method="post">
                                 <div class="payment_item">
                                     <div class="radion_btn">
                                         <input type="radio" id="f-option7" name="selector">
@@ -143,7 +143,7 @@
                                     </div>
                                     <p>Pay via MPESA. (Enter your number in the format 2547xxxxxx)</p>
 
-                                    <input id="number" class="form-control" type="tel">
+                                    <input id="number" class="form-control" type="tel" name="number">
                                 </div>
                                 <div class="payment_item active">
                                     <div class="radion_btn">
