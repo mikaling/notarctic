@@ -19,6 +19,7 @@
         </ul>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+
                 <p>Beryl Cook is one of Britain’s most talented and amusing artists .Beryl’s pictures feature women of all shapes
                     and sizes enjoying themselves .Born between the two world wars, Beryl Cook eventually left Kendrick School in
                     Reading at the age of 15, where she went to secretarial school and then into an insurance office. After moving to

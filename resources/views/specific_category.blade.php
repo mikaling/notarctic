@@ -22,21 +22,17 @@
 
 <div class="container" style="margin-top: 50px">
 
-
-{{--        <p>{{ $products->name }}</p>--}}
-{{--        <img src="storage/images/{{ $category->path }}" >--}}
-{{--        <p>{{ $products->description }}</p>--}}
     <div class="row" >
     @foreach($category->products as $products)
 
             <div class="col-md-6 col-lg-4">
             <div class="card" style="width: 18rem; height: 350px; margin-bottom: 30px" >
-                <img src="public/storage/images/{{ $category->path }}" class="card-img-top" alt="...">
+                <img src="{{asset("storage/images/$products->path")}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{ $products->name }}</h5>
 {{--                    <p>{{ $products->description }}</p>--}}
                     <p>Price: Ksh{{ $products->price }}</p>
-                    <a href="#" class="btn btn-primary" style="background-color: #FF35C3">View product</a>
+                    <a href="/notarctic/public/description/{{ $products->id }}" class="btn btn-primary" style="background-color: #FF35C3">View product</a>
                 </div>
             </div>
         </div>

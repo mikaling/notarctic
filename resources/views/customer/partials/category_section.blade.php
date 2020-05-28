@@ -17,7 +17,7 @@
                                 </div>
                                 <div class="card-body">
 {{--                                    <p>Accessories</p>--}}
-                                    <h4 class="card-product__title"><a href="/categories/{{ $category->id }}" >{{$category->name}}</a></h4>
+                                    <h4 class="card-product__title"><a href="/notarctic/public/categories/{{ $category->id }}" >{{$category->name}}</a></h4>
                                 </div>
                             </div>
                         </div>

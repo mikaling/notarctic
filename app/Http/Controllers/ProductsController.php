@@ -18,15 +18,15 @@ class ProductsController extends Controller
     public function displayByCategory(){
 
         $category=Category::all();
-//        $category=Category::findOrFail($cat_id);
-//        return view('category_test',compact('category'));
+
         return view('category',compact('category'));
     }
 
 
 
     public function productDescription($id){
-        return view('view_single_product');
+        $product=Product::where('id',$id)->get();
+        return view('view_single_product',compact('product'));
     }
 
     public function show(Category $category)

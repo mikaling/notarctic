@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebbfbff0-0ba8-48cf-af37-5d5bdd865c7f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/customer/partials/single_products_area.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Wishlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Wishlist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/partials/_navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/partials/_navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/partials/category_section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/partials/category_section.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/partials/product_description.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/partials/product_description.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/partials/trending_products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/partials/trending_products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/specific_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/specific_category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/view_single_product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/view_single_product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +175,10 @@
       <workItem from="1588844553756" duration="47000" />
       <workItem from="1588844638611" duration="66000" />
       <workItem from="1588844791228" duration="40822000" />
+      <workItem from="1589185561747" duration="102000" />
+      <workItem from="1590051790963" duration="1640000" />
+      <workItem from="1590142507782" duration="4185000" />
+      <workItem from="1590685553716" duration="11386000" />
     </task>
     <task id="LOCAL-00001" summary="Modified UI&#10;Displayed products by category">
       <created>1588931998320</created>
@@ -172,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588931998320</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Modified ProductsController">
+      <created>1589185637089</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589185637089</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,17 +202,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Modified UI&#10;Displayed products by category" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified UI&#10;Displayed products by category" />
+    <MESSAGE value="Modified ProductsController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified ProductsController" />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1588852413254">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1588852413254" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1588931989848">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1589185633978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588931989848" />
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1589185633978" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1588844887782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -199,14 +222,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="176" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1588845911442" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1588932014205">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1589185641483">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588932014205" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1589185565130">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1589185641483" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1590685555945">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589185565130" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590685555945" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1588866982820">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

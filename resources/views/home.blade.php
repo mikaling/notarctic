@@ -20,10 +20,10 @@
                 </div>
                 <div class="col-sm-7 col-lg-6 offset-lg-1 pl-4 pl-md-5 pl-lg-0">
                     <div class="hero-banner__content">
-{{--                        <h4>Shop is fun</h4>--}}
+
                         <h2>Arctic Computer Shop</h2>
                         <p>The place to come when you need the best bargains on computers, digital cameras, fax machines, laptops, projectors, and related accessories.</p>
-                        <a class="button button-hero" href="/products">Browse Now</a>
+                        <a class="button button-hero" href="/notarctic/public/products">Browse Now</a>
                     </div>
                 </div>
             </div>
@@ -49,11 +49,9 @@
     <!-- ================ Best Selling item  carousel end ================= -->
 
     <!-- ================ Blog section start ================= -->
-{{--    @include('customer.partials.blog')--}}
     <!-- ================ Blog section end ================= -->
 
     <!-- ================ Subscribe section start ================= -->
-{{--    @include('customer.partials.subscribe')--}}
     <!-- ================ Subscribe section end ================= -->
 
 
