@@ -32,7 +32,7 @@
                     <h5 class="card-title">{{ $products->name }}</h5>
 {{--                    <p>{{ $products->description }}</p>--}}
                     <p>Price: Ksh{{ $products->price }}</p>
-                    <a href="/notarctic/public/description/{{ $products->id }}" class="btn btn-primary" style="background-color: #FF35C3">View product</a>
+                    <a href="/description/{{ $products->id }}" class="btn btn-primary" style="background-color: #FF35C3">View product</a>
                 </div>
             </div>
         </div>
@@ -66,7 +66,3 @@
 <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
-

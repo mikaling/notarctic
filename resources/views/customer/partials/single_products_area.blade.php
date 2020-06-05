@@ -20,7 +20,7 @@
                     <h3>{{$product->name}}</h3>
                     <h2>Ksh {{$product->price}}</h2>
                     <ul class="list">
-                        <li><a class="active" href="/notarctic/public/categories/{{$product->category->id }}"><span>Category</span> : {{$product->category->name}}</a></li>
+                        <li><a class="active" href="/categories/{{$product->category->id }}"><span>Category</span> : {{$product->category->name}}</a></li>
                         <li><a href="#"><span>Availibility</span> {{$product->quantity>1 ? ": In Stock" :": Out of Stock!"}}</a></li>
                     </ul>
                     <p>{{$product->description}}</p>
