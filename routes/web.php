@@ -28,7 +28,15 @@ Route::get('user', ['middleware'=>'auth' ,function () {
 }])->middleware('verified');
 Auth::routes();
 
+
 Route::get('payment', 'PaymentController@index');
 Route::post('charge', 'PaymentController@charge');
 Route::get('paymentsuccess', 'PaymentController@payment_success');
 Route::get('paymenterror', 'PaymentController@payment_error');
+=======
+Route::get('checkout', function () {
+    return view('checkout');
+});
+// TODO: POST method checkout route
+
+
