@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReviewsTable extends Migration
+class CreatePaymentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,15 @@ class CreateReviewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('review', function (Blueprint $table) {
+        Schema::create('payments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            //$table->unsignedBigInteger('user_id');
-            $table->string('title');
-            $table->string('body');
+            $table->string('payment_id');
+            $table->string('payer_id');
+            $table->string('payer_email');
+            $table->float('amount', 10, 2);
+            $table->string('currency');
+            $table->string('payment_status');
             $table->timestamps();
-
-            /**$table->foreign('user_id')
-                ->references('id')
-                ->on('user')
-                ->onDelete('cascade');**/
         });
     }
 
@@ -34,6 +32,6 @@ class CreateReviewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('review');
+        Schema::dropIfExists('payments');
     }
 }

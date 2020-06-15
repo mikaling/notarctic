@@ -15,7 +15,7 @@ class CreatePurchasesTable extends Migration
     {
         Schema::create('purchase', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
+           // $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('address_id');
             $table->string('mpesa_transaction_number')->nullable();
             $table->integer('amount');
@@ -23,10 +23,10 @@ class CreatePurchasesTable extends Migration
             $table->string('credit_card_number')->nullable();
             $table->timestamps();
 
-            $table->foreign('user_id')
+            /*$table->foreign('user_id')
                 ->references('id')
                 ->on('user')
-                ->onDelete('cascade');
+                ->onDelete('cascade');*/
         });
     }
 

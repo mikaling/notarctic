@@ -28,4 +28,7 @@ Route::get('user', ['middleware'=>'auth' ,function () {
 }])->middleware('verified');
 Auth::routes();
 
-
+Route::get('payment', 'PaymentController@index');
+Route::post('charge', 'PaymentController@charge');
+Route::get('paymentsuccess', 'PaymentController@payment_success');
+Route::get('paymenterror', 'PaymentController@payment_error');
