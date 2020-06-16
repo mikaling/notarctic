@@ -15,15 +15,15 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('review', function (Blueprint $table) {
             $table->bigIncrements('id');
-            //$table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('title');
             $table->string('body');
             $table->timestamps();
 
-            /**$table->foreign('user_id')
+            $table->foreign('user_id')
                 ->references('id')
                 ->on('user')
-                ->onDelete('cascade');**/
+                ->onDelete('cascade');
         });
     }
 

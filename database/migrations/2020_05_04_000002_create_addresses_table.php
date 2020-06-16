@@ -15,7 +15,7 @@ class CreateAddressesTable extends Migration
     {
         Schema::create('address', function (Blueprint $table) {
             $table->bigIncrements('id');
-           // $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->string('line1');
             $table->string('line2');
@@ -25,10 +25,10 @@ class CreateAddressesTable extends Migration
             $table->string('phone');
             $table->timestamps();
 
-            /*$table->foreign('user_id')
+            $table->foreign('user_id')
                 ->references('id')
                 ->on('user')
-                ->onDelete('cascade');*/
+                ->onDelete('cascade');
         });
     }
 

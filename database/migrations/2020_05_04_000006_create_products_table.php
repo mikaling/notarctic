@@ -15,7 +15,7 @@ class CreateProductsTable extends Migration
     {
         Schema::create('product', function (Blueprint $table) {
             $table->bigIncrements('id');
-            //$table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('category_id');
             $table->string('name');
             $table->integer('price');
             $table->text('description');
@@ -23,48 +23,48 @@ class CreateProductsTable extends Migration
             $table->string('brand');
             $table->timestamps();
 
-           /* $table->foreign('category_id')
+           $table->foreign('category_id')
                 ->references('id')
                 ->on('category')
-                ->onDelete('cascade');*/
+                ->onDelete('cascade');
         });
 
         Schema::create('product_wishlist', function (Blueprint $table) {
             $table->bigIncrements('id');
-            //$table->unsignedBigInteger('product_id');
-           // $table->unsignedBigInteger('wishlist_id');
+            $table->unsignedBigInteger('product_id');
+           $table->unsignedBigInteger('wishlist_id');
             $table->timestamps();
 
             // unique key
-           // $table->unique(['product_id', 'wishlist_id']);
+            $table->unique(['product_id', 'wishlist_id']);
 
             // foreign keys
-           /* $table->foreign('product_id')
+            $table->foreign('product_id')
                 ->references('id')->on('product')
-                ->onDelete('cascade');*/
+                ->onDelete('cascade');
 
-            /*$table->foreign('wishlist_id')
+            $table->foreign('wishlist_id')
                 ->references('id')->on('wishlist')
-                ->onDelete('cascade');*/
+                ->onDelete('cascade');
         });
 
         Schema::create('product_purchase', function (Blueprint $table) {
             $table->bigIncrements('id');
-            //$table->unsignedBigInteger('product_id');
-            //$table->unsignedBigInteger('purchase_id');
+            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('purchase_id');
             $table->timestamps();
 
             // unique key
-            //$table->unique(['product_id', 'purchase_id']);
+            $table->unique(['product_id', 'purchase_id']);
 
             // foreign keys
-           /* $table->foreign('product_id')
+            $table->foreign('product_id')
                 ->references('id')->on('product')
                 ->onDelete('cascade');
 
             $table->foreign('purchase_id')
                 ->references('id')->on('purchase')
-                ->onDelete('cascade');*/
+                ->onDelete('cascade');
         });
     }
 

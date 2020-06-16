@@ -145,6 +145,7 @@
 
                                     <input id="number" class="form-control" type="tel" name="number">
                                 </div>
+                                </form>
                                 <div class="payment_item active">
                                     <div class="radion_btn">
                                         <input type="radio" id="f-option6" name="selector">
@@ -176,7 +177,7 @@
                                 <div class="text-center">
                                     <button class="button button-login" type="submit" value="submit">Pay</button>
                                 </div>
-                            </form>
+                            
 
                         </div>
                     </div>
