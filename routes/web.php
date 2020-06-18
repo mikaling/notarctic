@@ -21,6 +21,8 @@ Route::get('/description/{id}','ProductsController@productDescription');
 
 Route::get('/categories/{category}','ProductsController@show');
 
+Route::get('/search', 'ProductsController@showSearchResults')->name('search');
+
 //Route::get('products/{cat_id}','ProductsController@productDescription');
 
 //Route::resource('/products','ProductsController');

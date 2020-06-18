@@ -31,7 +31,16 @@
                         <input type="text" name="qty" id="sst" size="2" maxlength="12" value="1" title="Quantity:" class="input-text qty">
                         <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
                                 class="reduced items-count" type="button"><i class="ti-angle-right"></i></button>
-                        <a class="button primary-btn" href="#">Add to Cart</a>
+                        <!-- <a class="button primary-btn" href="#">Add to Cart</a> -->
+                        <button class="snipcart-add-item button button-header"
+                        data-item-id="{{$product->id}}"
+                        data-item-price="{{$product->price}}"
+                        data-item-url="/description/{{$product->id}}"
+                        data-item-description="{{$product->description}}"
+                        data-item-image="{{asset('storage/images/$products->path')}}"
+                        data-item-name="{{$product->name}}">
+                        Add to cart
+                        </button>
                     </div>
                     <div class="card_area d-flex align-items-center">
                         <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>

@@ -1,5 +1,6 @@
 <header class="header_area">
-    <div class="main_menu">
+
+    <div class="main_menu offset" id="mainNavBar">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand logo_h" href="/"><img src="img/logo.png" alt=""></a>
@@ -42,12 +43,28 @@
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
                     </ul>
 
                     <ul class="nav-shop">
-                        <li class="nav-item"><button><i class="ti-search"></i></button></li>
-                        <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
-                        <li class="nav-item"><a class="button button-header" href="#">Buy Now</a></li>
+                        {{-- <li class="nav-item"><button><i class="ti-search"></i></button></li> --}}
+                        <li class="nav-item">
+                            <form action="/search" method="GET" class="search-form">
+                                <i class="fa fa-search search-icon"></i>
+                                <input type="text" name="query" id="query"  class="search-box" placeholder="Search for products...">
+                            </form>
+                        </li>
+                        <!-- <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
+                        <li class="nav-item"><a class="button button-header" href="#">Buy Now</a></li> -->
+
+                        <li class="nav-item">
+                            <!-- <button class="snipcart-checkout button-header" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="true" aria-label="toggle cart"> -->
+                            <button class="button-header snipcart-checkout">
+                            <i class="ti-shopping-cart"></i>
+                            <span class="snipcart-items-count">
+                            </span>
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>

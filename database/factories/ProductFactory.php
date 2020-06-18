@@ -21,12 +21,13 @@ use Illuminate\Support\Str;
 
 $factory->define(Product::class, function (Faker $faker) {
     return [
-        'category_id'=>$faker->numberBetween($min=1,$max=1),
+        'category_id'=>$faker->numberBetween($min=1,$max=6),
         'name' => $faker->word,
         'price' => $faker->randomDigit,
         'description' =>$faker->realText(180),
         'quantity' => $faker->randomDigitNotNull,
         'brand' => Str::random(10),
-        'path' => $faker->image('public/storage/images',400,300, null, false) ,
+        //'path' => $faker->image('public/storage/images',640, 480, null, false) ,
+        'path' => $faker->image('{{asset("storage/images/}}', 640, 480, null, false),
     ];
 });

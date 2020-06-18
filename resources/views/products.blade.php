@@ -11,4 +11,4 @@
         <img src="storage/images/{{ $product->path }}" >
     </div>
 
-    @endforeach
+@endforeach

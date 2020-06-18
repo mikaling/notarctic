@@ -14,24 +14,48 @@
                             <div class="col-6">
                                 <div class="box_total">
                                     <h5>Overall</h5>
-                                    <h4>{{ $review_rating }}</h4>
-                                    <h6>({{ $review_count }} Reviews)</h6>
+                                    <h4>{{ $review_analysis['review_rating'] }}</h4>
+                                    <h6>({{ $review_analysis['review_count'] }} Reviews)</h6>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="rating_list">
-                                    <h3>Based on {{ $review_count }} Reviews</h3>
+                                    <h3>Based on {{ $review_analysis['review_count'] }} Reviews</h3>
                                     <ul class="list">
-                                        <li><a href="#">5 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                                    class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
-                                        <li><a href="#">4 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                                    class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
-                                        <li><a href="#">3 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                                    class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
-                                        <li><a href="#">2 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                                    class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
-                                        <li><a href="#">1 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                                    class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
+                                        <li><a href="#">
+                                            {{ $review_analysis['count_rating_five'] }}
+                                            @for($i = 0; $i < 5; $i++)
+                                            <i class="fa fa-star"></i>
+                                            @endfor
+                                        </a></li>
+
+                                        <li><a href="#">
+                                            {{ $review_analysis['count_rating_four'] }}
+                                            @for($i = 0; $i < 4; $i++)
+                                            <i class="fa fa-star"></i>
+                                            @endfor
+                                        </a></li>
+
+                                        <li><a href="#">
+                                            {{ $review_analysis['count_rating_three'] }}
+                                            @for($i = 0; $i < 3; $i++)
+                                            <i class="fa fa-star"></i>
+                                            @endfor
+                                        </a></li>
+
+                                        <li><a href="#">
+                                            {{ $review_analysis['count_rating_two'] }}
+                                            @for($i = 0; $i < 2; $i++)
+                                            <i class="fa fa-star"></i>
+                                            @endfor
+                                        </a></li>
+
+                                        <li><a href="#">
+                                            {{ $review_analysis['count_rating_one'] }}
+                                            @for($i = 0; $i < 1; $i++)
+                                            <i class="fa fa-star"></i>
+                                            @endfor
+                                        </a></li>
                                     </ul>
                                 </div>
                             </div>

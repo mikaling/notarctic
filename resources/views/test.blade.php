@@ -6,4 +6,4 @@
 <p>{{$product->name}}</p>
 <p>{{$product->description}}</p>
 
-    @endforeach
+@endforeach

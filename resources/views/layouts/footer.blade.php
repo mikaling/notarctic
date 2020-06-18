@@ -1,4 +1,5 @@
 <footer class="footer">
+
 <div class="footer-area">
     <div class="container">
         <div class="row section_gap">
