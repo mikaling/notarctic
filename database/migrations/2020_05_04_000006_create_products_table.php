@@ -23,7 +23,7 @@ class CreateProductsTable extends Migration
             $table->string('brand');
             $table->timestamps();
 
-            $table->foreign('category_id')
+           $table->foreign('category_id')
                 ->references('id')
                 ->on('category')
                 ->onDelete('cascade');
@@ -32,7 +32,7 @@ class CreateProductsTable extends Migration
         Schema::create('product_wishlist', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('product_id');
-            $table->unsignedBigInteger('wishlist_id');
+           $table->unsignedBigInteger('wishlist_id');
             $table->timestamps();
 
             // unique key

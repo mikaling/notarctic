@@ -15,7 +15,7 @@ class CreatePurchasesTable extends Migration
     {
         Schema::create('purchase', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
+           $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('address_id');
             $table->string('mpesa_transaction_number')->nullable();
             $table->integer('amount');

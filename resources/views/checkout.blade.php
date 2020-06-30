@@ -1,6 +1,7 @@
 @extends('hometemplate')
 
 @section('sessionname-list')
+
     @guest
         <li class="nav-item"><a class="nav-link" href="{{url('/login')}}">Login </a></li>
         <li class="nav-item"><a class="nav-link" href="{{url('/register')}}">Register</a></li>
@@ -145,6 +146,7 @@
 
                                     <input id="number" class="form-control" type="tel" name="number">
                                 </div>
+                                </form>
                                 <div class="payment_item active">
                                     <div class="radion_btn">
                                         <input type="radio" id="f-option6" name="selector">
@@ -154,6 +156,11 @@
                                     </div>
                                     <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal
                                         account.</p>
+                                        <form action="{{ url('charge') }}" method="post">
+                                    <input type="text" name="amount" />
+                                    {{ csrf_field() }}
+                                    <input type="submit" name="submit" value="Pay Now">
+                                </form>
                                 </div>
                                 <div class="payment_item">
                                     <div class="radion_btn">
@@ -161,17 +168,23 @@
                                         <label for="f-option5">Credit Card</label>
                                         <div class="check"></div>
                                     </div>
-                                    <p>Pay via credit or debit card.</p>
+                                    
+                                    <p>Pay via Credit Card. </p>
+
+                                    <div class="text-center">
+                                    <a href="{{ url('/stripepayment') }}" class="button button-login">Pay</a>
+                                </div>
+                                
                                 </div>
                                 <div class="creat_account">
                                     <input type="checkbox" id="f-option4" name="selector">
                                     <label for="f-option4">I’ve read and accept the </label>
                                     <a href="#">terms & conditions*</a>
                                 </div>
-                                <div class="text-center">
+                               <!-- <div class="text-center">
                                     <button class="button button-login" type="submit" value="submit">Pay</button>
-                                </div>
-                            </form>
+                                </div>-->
+                            
 
                         </div>
                     </div>
@@ -180,4 +193,8 @@
         </div>
     </section>
     <!--================End Checkout Area =================-->
+   
 @endsection
+
+
+
