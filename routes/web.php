@@ -29,10 +29,13 @@ Route::get('user', ['middleware'=>'auth' ,function () {
 Auth::routes();
 
 
-Route::get('payment', 'PaymentController@index');
+
 Route::post('charge', 'PaymentController@charge');
 Route::get('paymentsuccess', 'PaymentController@payment_success');
 Route::get('paymenterror', 'PaymentController@payment_error');
+
+Route::post('/stripecharge', 'StripePaymentController@charge');
+Route::get('/stripepayment', 'StripePaymentController@index');
 
 Route::get('checkout', function () {
     return view('checkout');

@@ -1,6 +1,7 @@
 @extends('hometemplate')
 
 @section('sessionname-list')
+
     @guest
         <li class="nav-item"><a class="nav-link" href="{{url('/login')}}">Login </a></li>
         <li class="nav-item"><a class="nav-link" href="{{url('/register')}}">Register</a></li>
@@ -167,16 +168,22 @@
                                         <label for="f-option5">Credit Card</label>
                                         <div class="check"></div>
                                     </div>
-                                    <p>Pay via credit or debit card.</p>
+                                    
+                                    <p>Pay via Credit Card. </p>
+
+                                    <div class="text-center">
+                                    <a href="{{ url('/stripepayment') }}" class="button button-login">Pay</a>
+                                </div>
+                                
                                 </div>
                                 <div class="creat_account">
                                     <input type="checkbox" id="f-option4" name="selector">
                                     <label for="f-option4">I’ve read and accept the </label>
                                     <a href="#">terms & conditions*</a>
                                 </div>
-                                <div class="text-center">
+                               <!-- <div class="text-center">
                                     <button class="button button-login" type="submit" value="submit">Pay</button>
-                                </div>
+                                </div>-->
                             
 
                         </div>
@@ -186,4 +193,8 @@
         </div>
     </section>
     <!--================End Checkout Area =================-->
+   
 @endsection
+
+
+
