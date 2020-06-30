@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
 use App\Category;
 use App\Review;
+use Gloudemans\Shoppingcart\Contracts\Buyable;
 
-class Product extends Model
+class Product extends Model implements Buyable
 {
     //
     use Searchable, SearchableTrait;
@@ -29,7 +30,7 @@ class Product extends Model
     }
 
     public function reviews() {
-        return $this->hasMany('Review');
+        return $this->hasMany(Review::class);
     }
 
     /**
@@ -40,6 +41,19 @@ class Product extends Model
     public function searchableAs() {
         return 'products_index';
     }
+
+    public function getBuyableIdentifier($options = null){
+        return $this->id;
+    }
+
+    public function getBuyableDescription($options = null){
+        return $this->name;
+    }
+
+    public function getBuyablePrice($options = null){
+        return $this->price;
+    }
+
 
     //TODO: Set up searchable array of fields
     // public function toSearchableArray() {

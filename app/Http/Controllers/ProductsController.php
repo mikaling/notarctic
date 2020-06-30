@@ -28,13 +28,13 @@ class ProductsController extends Controller
         $product = Product::where('id', $id)->get();
         $reviews = Review::where('product_id', $id)->paginate(3);
 
-        $count_rating_one = Review::where('rating', 1)->count();
-        $count_rating_two = Review::where('rating', 2)->count();
-        $count_rating_three = Review::where('rating', 3)->count();
-        $count_rating_four = Review::where('rating', 4)->count();
-        $count_rating_five = Review::where('rating', 5)->count();
-        $review_count = Review::count();
-        $review_rating = Review::avg('rating');
+        $count_rating_one = Review::where(['product_id' => $id,'rating' => 1])->count();
+        $count_rating_two = Review::where(['product_id' => $id,'rating' => 2])->count();
+        $count_rating_three = Review::where(['product_id' => $id,'rating' => 3])->count();
+        $count_rating_four = Review::where(['product_id' => $id,'rating' => 4])->count();
+        $count_rating_five = Review::where(['product_id' => $id,'rating' => 5])->count();
+        $review_count = Review::where('product_id', $id)->count();
+        $review_rating = Review::where('product_id', $id)->avg('rating');
 
         $review_analysis = [
             'review_count' => $review_count,
@@ -62,7 +62,7 @@ class ProductsController extends Controller
         ]);
         $query = $request->input('query');
         // $products = Product::where('name', 'like', "%$query%")->paginate(1);
-        $products = Product::search($query)->paginate(1);
+        $products = Product::search($query)->paginate(3);
         return view('search.basic-search')->with('products', $products);
     }
 }

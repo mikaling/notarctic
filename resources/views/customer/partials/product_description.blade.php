@@ -66,18 +66,17 @@
                             @foreach($reviews as $review)
                                 <div class="review_item">
                                     <div class="media">
-                                        <div class="d-flex">
-                                            <img src="img/product/review-1.png" alt="">
-                                        </div>
                                         <div class="media-body">
-                                            <h4>Blake Ruiz</h4>
+                                            <hr>
+                                            <h4>{{ $review->user->name }}</h4>
                                             @for($i = 0; $i < $review->rating; $i++)
                                             <i class="fa fa-star"></i>
                                             @endfor
+                                            <h4>{{$review->title}}</h4>
+                                            <p>{{$review->body}}</p>
+                                            <hr>
                                         </div>
                                     </div>
-                                    <h4>{{$review->title}}</h4>
-                                    <p>{{$review->body}}</p>
                                 </div>
                             @endforeach
                             {{ $reviews->links() }}

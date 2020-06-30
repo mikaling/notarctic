@@ -1,5 +1,7 @@
-@include('layouts.includes.header')
+@include('layouts.header')
+
+@include('customer.partials._navbar')
 
 @yield('content')
 
-@include('layouts.includes.footer')
+@include('layouts.footer')

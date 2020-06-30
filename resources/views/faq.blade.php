@@ -20,6 +20,7 @@
 <!-- ================ end banner area ================= -->
 
 
+<!-- FAQ section -->
 <section class="section-margin--small mb-5">
 <div class="container justify-content-center">
 <div class="row">
@@ -128,4 +129,5 @@ Subject to material availability, repairs covered by the warranty will be carrie
 </div>
 </div>
 </section>
+<!-- FAQ end section -->
 @endsection

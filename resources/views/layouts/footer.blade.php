@@ -31,8 +31,8 @@
                             <span class="fa fa-location-arrow"></span>
                             Head Office
                         </p>
-                        <p>2<sup>nd</sup>floor Kenwood House, Kimathi Street,</a> <br />
-                            <em>next to JAVA HOUSE, opposite KFC &amp; Nation Center.</p>
+                        <p>2<sup>nd</sup>floor Kenwood House, Kimathi Street,<br/>
+                            next to JAVA HOUSE, opposite KFC Nation Center.</p>
 
                         <p class="sm-head">
                             <span class="fa fa-phone"></span>
@@ -57,14 +57,27 @@
     </div>
 </div>
 
-{{--<div class="footer-bottom">--}}
-{{--    <div class="container">--}}
-{{--        <div class="row d-flex">--}}
-{{--            <p class="col-lg-12 footer-text text-center">--}}
-{{--                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->--}}
-{{--                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>--}}
-{{--                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
+{{-- <div class="footer-bottom">
+   <div class="container">
+       <div class="row d-flex">
+           <p class="col-lg-12 footer-text text-center">
+               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+               Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+       </div>
+   </div>
+</div> --}}
 </footer>
+<script src="{{asset('app-assets/vendors/jquery/jquery-3.2.1.min.js')}}"></script>
+<script src="{{asset('app-assets/vendors/bootstrap/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('app-assets/vendors/skrollr.min.js')}}"></script>
+<script src="{{asset('app-assets/vendors/owl-carousel/owl.carousel.min.js')}}"></script>
+<script src="{{asset('app-assets/vendors/nice-select/jquery.nice-select.min.js')}}"></script>
+<script src="{{asset('app-assets/vendors/nouislider/nouislider.min.js')}}"></script>
+<script src="{{asset('app-assets/vendors/jquery.ajaxchimp.min.js')}}"></script>
+<script src="{{asset('app-assets/vendors/mail-script.js')}}"></script>
+<script src="{{asset('app-assets/js/main.js')}}"></script>
+<script src="{{asset('js/app.js')}}"></script>
+
+</body>
+</html>

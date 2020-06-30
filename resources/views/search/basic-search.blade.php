@@ -29,7 +29,7 @@
             <div class="row s_product_inner">
                 <div class="col-lg-6">
                     <div>
-                        <img src="{{ asset("storage/images/$product->path") }}" class"img-fluid" alt="">
+                        <img src="{{ asset("storage/images/$product->path") }}" height="400" width="400" class"img-fluid" alt="">
                     </div>
                 </div>
 
@@ -40,6 +40,7 @@
                         <h2>Ksh {{$product->price}}</h2>
                         <ul class="list">
                             <li><a class="active" href="/categories/{{$product->category->id }}"><span>Category</span> : {{$product->category->name}}</a></li>
+                            <li><a href="#"><span>Brand</span> : {{$product->brand}} </a></li>
                             <li><a href="#"><span>Availibility</span> {{$product->quantity>1 ? ": In Stock" :": Out of Stock!"}}</a></li>
                         </ul>
                         <p>{{$product->description}}</p>
