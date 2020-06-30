@@ -29,3 +29,8 @@ Route::get('user', ['middleware'=>'auth' ,function () {
 Auth::routes();
 
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
