@@ -13,12 +13,15 @@ class PaymentController extends Controller
     public function __construct()
     {
         $this->gateway = Omnipay::create('PayPal_Rest');
-        $this->gateway->setClientId('AX7xKIK_2lRUi6QXk1YtTSi7zZY63WPGsOoon2PRpBGP56-Kn9S6cXIjUSgmOSilidkCdwgedriM8FuX');//insert client id here
-        $this->gateway->setSecret('EPJSu8dy5RNAwDjimDcxCF831xPjoIZI6tuYywRJwraxK7Ma7Pg7m6h0xmiC_QERtUcZwWf2GWPGwDWR');//insert secret here
+        $this->gateway->setClientId('');//insert client id here
+        $this->gateway->setSecret('');//insert secret here
         $this->gateway->setTestMode(true); //set it to 'false' when going  live
     }
  
-    
+    public function index()
+    {
+        return view('payment');
+    }
     public function charge(Request $request)
     {
         if($request->input('submit'))
@@ -73,7 +76,7 @@ class PaymentController extends Controller
                     $payment->save();
                 }
          
-                return redirect('afterpayment');
+                return "Payment is successful. Your transaction id is: ". $arr_body['id'];
                 
             } else {
                 return $response->getMessage();

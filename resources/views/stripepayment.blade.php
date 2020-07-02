@@ -1,66 +1,23 @@
-@extends('hometemplate')
-
-@section('sessionname-list')
-
-    @guest
-        <li class="nav-item"><a class="nav-link" href="{{url('/login')}}">Login </a></li>
-        <li class="nav-item"><a class="nav-link" href="{{url('/register')}}">Register</a></li>
-
-    @else
-        <li class="nav-item dropdown">
-            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                {{ Auth::user()->name }} <span class="caret"></span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ route('logout') }}"
-                   onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-            </div>
-        </li>
-    @endguest
-
-
-@endsection
-@section('main-page-content')
-<section class="blog-banner-area" id="category">
-<div class="col-sm-12 my-auto">
-                        <div class="order_box ">
-                <div class="text-center">
-                <h1>Credit Card Payment</h1>
-                <link rel="stylesheet" href="{{ asset('/css/style.css') }}" />
+<link rel="stylesheet" href="{{ asset('/css/style.css') }}" />
 <script src="https://js.stripe.com/v3/"></script>
-
 <form action="{{ url('stripecharge') }}" method="post" id="payment-form">
-    <div >
-        <p><input type="text" name="amount" class="form-control"placeholder="Enter Amount" /></p>
-        
-        <p><input type="email" name="email" class="form-control"placeholder="Enter Email" /></p>
-        
+    <div class="form-row">
+        <p><input type="text" name="amount" placeholder="Enter Amount" /></p>
+        <p><input type="email" name="email" placeholder="Enter Email" /></p>
+        <label for="card-element">
+        Credit or debit card
+        </label>
         <div id="card-element">
         <!-- A Stripe Element will be inserted here. -->
         </div>
      
         <!-- Used to display form errors. -->
         <div id="card-errors" role="alert"></div>
-
     </div>
-    <br>
-    <button class="button button-login">Submit Payment</button>
+    <button>Submit Payment</button>
     {{ csrf_field() }}
 </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    
 <script>
 var publishable_key = 'pk_test_51GuiySDSVAZTTXtTj6soTjZzhxRHIdHnXnE9HhC8iiCrpWhuQJHGzDTbZ4hcGKchqE6MT3rsWXQUf6pQDRld41J000cSrTafgT';
 </script>
 <script src="{{ asset('/js/card.js') }}"></script>
-@endsection

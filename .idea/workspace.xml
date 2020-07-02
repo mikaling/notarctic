@@ -3,17 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ebbfbff0-0ba8-48cf-af37-5d5bdd865c7f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MpesaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MpesaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/checkout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/partials/product_description.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/partials/product_description.blade.php" afterDir="false" />
->>>>>>> eec030bc1c010c6ae0922f5c390681e84323b501
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,13 +18,6 @@
     <execution>
       <executable />
     </execution>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="blade" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -152,27 +139,6 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\notarctic\public\img\home" />
-      <recent name="C:\xampp\htdocs\notarctic\public\img" />
-      <recent name="C:\xampp\htdocs\notarctic\public\img\product" />
-      <recent name="C:\xampp\htdocs\notarctic\public" />
-      <recent name="C:\xampp\htdocs\notarctic\resources\views" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -191,65 +157,21 @@
       <updated>1588590076876</updated>
       <workItem from="1588590080110" duration="13152000" />
       <workItem from="1588653650001" duration="104000" />
-<<<<<<< HEAD
       <workItem from="1588874088166" duration="4227000" />
       <workItem from="1589555824357" duration="3660000" />
       <workItem from="1589994409121" duration="3711000" />
       <workItem from="1590079010809" duration="3939000" />
       <workItem from="1590138958075" duration="186000" />
-=======
-      <workItem from="1588874088166" duration="3086000" />
-      <workItem from="1588590080110" duration="11358000" />
-      <workItem from="1588844553756" duration="47000" />
-      <workItem from="1588844638611" duration="66000" />
-      <workItem from="1588844791228" duration="40822000" />
-      <workItem from="1589185561747" duration="102000" />
-      <workItem from="1590051790963" duration="1640000" />
-      <workItem from="1590142507782" duration="4185000" />
-      <workItem from="1590685553716" duration="11386000" />
     </task>
-    <task id="LOCAL-00001" summary="Modified UI&#10;Displayed products by category">
-      <created>1588931998320</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1588931998320</updated>
->>>>>>> eec030bc1c010c6ae0922f5c390681e84323b501
-    </task>
-    <task id="LOCAL-00002" summary="Modified ProductsController">
-      <created>1589185637089</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1589185637089</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Modified UI&#10;Displayed products by category" />
-    <MESSAGE value="Modified ProductsController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified ProductsController" />
-  </component>
   <component name="WindowStateProjectService">
     <state x="883" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590004912771">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-<<<<<<< HEAD
     <state x="883" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1590004912771" />
     <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1589560619009">
       <screen x="0" y="0" width="1536" height="864" />
@@ -275,37 +197,6 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="465" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1590139178919" />
-=======
-    <state x="465" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1588653746318" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1588852413254">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1588852413254" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1589185633978">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1589185633978" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1588844887782">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588844887782" />
-    <state x="176" y="287" key="NewPhpFileDialog" timestamp="1588845911442">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="176" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1588845911442" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1589185641483">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1589185641483" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1590685555945">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590685555945" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1588866982820">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1588866982820" />
->>>>>>> eec030bc1c010c6ae0922f5c390681e84323b501
     <state x="815" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1588591507915">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
