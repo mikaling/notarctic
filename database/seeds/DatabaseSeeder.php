@@ -15,10 +15,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
-        //factory(User::class, 5)->create();
-        //factory(Category::class, 4)->create();
-        //factory(Product::class, 10)->create();
-        factory(Review::class, 20)->create();
+//         $this->call(UserSeeder::class);
+        factory(User::class, 5)->create();
+        factory(Category::class, 4)->create();
+        factory(Product::class, 50)->create();
+        factory(Review::class, 50)->create();
     }
 }
