@@ -4,7 +4,6 @@ namespace App;
 
 use Nicolaslopezj\Searchable\SearchableTrait;
 use Illuminate\Database\Eloquent\Model;
-use Laravel\Scout\Searchable;
 use App\Category;
 use App\Review;
 use Gloudemans\Shoppingcart\Contracts\Buyable;
@@ -12,7 +11,7 @@ use Gloudemans\Shoppingcart\Contracts\Buyable;
 class Product extends Model implements Buyable
 {
     //
-    use Searchable, SearchableTrait;
+    use SearchableTrait;
 
     protected $searchable = [
         'columns' => [
@@ -31,15 +30,6 @@ class Product extends Model implements Buyable
 
     public function reviews() {
         return $this->hasMany(Review::class);
-    }
-
-    /**
-     * Get the index name for the model
-     * 
-     * @return string
-    */
-    public function searchableAs() {
-        return 'products_index';
     }
 
     public function getBuyableIdentifier($options = null){

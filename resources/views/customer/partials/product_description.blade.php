@@ -14,7 +14,7 @@
                             <div class="col-6">
                                 <div class="box_total">
                                     <h5>Overall</h5>
-                                    <h4>{{ $review_analysis['review_rating'] }}</h4>
+                                    <h4>{{ $review_analysis['review_rating'] > 0 ? $review_analysis['review_rating'] : 'N/A' }}</h4>
                                     <h6>({{ $review_analysis['review_count'] }} Reviews)</h6>
                                 </div>
                             </div>
