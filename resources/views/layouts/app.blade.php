@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -78,3 +79,12 @@
     </div>
 </body>
 </html>
+=======
+@include('layouts.header')
+
+@include('customer.partials._navbar')
+
+@yield('content')
+
+@include('layouts.footer')
+>>>>>>> eec030bc1c010c6ae0922f5c390681e84323b501

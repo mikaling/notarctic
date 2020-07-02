@@ -7,6 +7,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+<<<<<<< HEAD
 
 /**
  * The following block of code may be used to automatically register your
@@ -30,3 +31,13 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+=======
+// import VueInstantSearch from 'vue-instantsearch';
+// Vue.use(VueInstantSearch);
+
+// Vue.component('product-search', require('./components/search.vue').default);
+
+// const app = new Vue({
+//     el: '#app'
+// });
+>>>>>>> eec030bc1c010c6ae0922f5c390681e84323b501

@@ -1,5 +1,6 @@
 <?php
 
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
 Route::get('/', function () {
     return view('home');
 });
@@ -45,3 +47,23 @@ Route::get('checkout', function () {
 Route::get('afterpayment', function () {
     return view('afterpayment');
 });
+=======
+Route::get('/faq', 'FaqController@index');
+Route::get('/reviews', 'ReviewController@index');
+Route::get('/','ProductsController@homePageProducts');
+Route::get('/products','ProductsController@displayByCategory');
+Route::get('/description/{id}','ProductsController@productDescription');
+
+Route::get('/categories/{category}','ProductsController@show');
+
+Route::get('/search', 'ProductsController@showSearchResults')->name('search');
+
+Route::get('/cart', 'CartController@index')->name('cart.index');
+Route::post('/cart/{product}', 'CartController@store')->name('cart.store');
+Route::delete('/cart/{rowId}', 'CartController@remove')->name('cart.remove');
+Route::patch('/cart/{rowId}', 'CartController@update')->name('cart.update');
+
+//Route::get('products/{cat_id}','ProductsController@productDescription');
+
+//Route::resource('/products','ProductsController');
+>>>>>>> eec030bc1c010c6ae0922f5c390681e84323b501
