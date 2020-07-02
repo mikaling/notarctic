@@ -42,4 +42,3 @@ Route::get('checkout', function () {
 });
 // TODO: POST method checkout route
 
-
