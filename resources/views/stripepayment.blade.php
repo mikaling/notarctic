@@ -29,8 +29,8 @@
 @endsection
 @section('main-page-content')
 <section class="blog-banner-area" id="category">
-        <div class="container h-100">
-            <div class="blog-banner">
+<div class="col-sm-12 my-auto">
+                        <div class="order_box ">
                 <div class="text-center">
                 <h1>Credit Card Payment</h1>
                 <link rel="stylesheet" href="{{ asset('/css/style.css') }}" />
@@ -38,12 +38,10 @@
 
 <form action="{{ url('stripecharge') }}" method="post" id="payment-form">
     <div >
-        <p><input type="text" name="amount" placeholder="Enter Amount" /></p>
+        <p><input type="text" name="amount" class="form-control"placeholder="Enter Amount" /></p>
         
-        <p><input type="email" name="email" placeholder="Enter Email" /></p>
-        <label for="card-element">
-        Credit or debit card
-        </label>
+        <p><input type="email" name="email" class="form-control"placeholder="Enter Email" /></p>
+        
         <div id="card-element">
         <!-- A Stripe Element will be inserted here. -->
         </div>
