@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
 Route::get('/', function () {
     return view('home');
 });
@@ -47,7 +46,6 @@ Route::get('checkout', function () {
 Route::get('afterpayment', function () {
     return view('afterpayment');
 });
-=======
 Route::get('/faq', 'FaqController@index');
 Route::get('/reviews', 'ReviewController@index');
 Route::get('/','ProductsController@homePageProducts');
@@ -66,4 +64,4 @@ Route::patch('/cart/{rowId}', 'CartController@update')->name('cart.update');
 //Route::get('products/{cat_id}','ProductsController@productDescription');
 
 //Route::resource('/products','ProductsController');
->>>>>>> eec030bc1c010c6ae0922f5c390681e84323b501
+
