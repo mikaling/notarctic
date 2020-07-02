@@ -68,7 +68,7 @@
                                         @endfor
                                     </select>
                                 </td>
-                                <td>                                
+                                <td>
                                     <h5>Ksh. {{ $item->subtotal }}</h5>
                                 </td>
                                 <td>
@@ -78,7 +78,7 @@
                                         <button type="submit" class="button button-header"><i class="fa fa-trash" aria-hidden="true"></i></button>                                        </button>
                                     </form>
                                 </td>
-                            </tr>                             
+                            </tr>
                             @endforeach
 
                             <tr class="bottom_button">
@@ -176,7 +176,7 @@
                                 <td>
                                     <div class="checkout_btn_inner d-flex align-items-center">
                                         <a class="gray_btn" href="#">Continue Shopping</a>
-                                        <a class="primary-btn ml-2" href="#">Proceed to checkout</a>
+                                        <a class="primary-btn ml-2" href="/checkout">Proceed to checkout</a>
                                     </div>
                                 </td>
                             </tr>
