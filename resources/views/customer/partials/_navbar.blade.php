@@ -24,25 +24,47 @@
                   <li class="nav-item"><a class="nav-link" href="/cart">Shopping Cart</a></li>
                 </ul>
 							</li>
-              <li class="nav-item submenu dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Blog</a>
-                <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                  <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-                  <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-                </ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Pages</a>
-                <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                  <li class="nav-item"><a class="nav-link" href="tracking-order.html">Tracking</a></li>
-                </ul>
-              </li>
+{{--              <li class="nav-item submenu dropdown">--}}
+{{--                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"--}}
+{{--                  aria-expanded="false">Blog</a>--}}
+{{--                <ul class="dropdown-menu">--}}
+{{--                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>--}}
+{{--                  <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>--}}
+{{--                  <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>--}}
+{{--                </ul>--}}
+{{--							</li>--}}
+{{--							<li class="nav-item submenu dropdown">--}}
+{{--                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"--}}
+{{--                  aria-expanded="false">Pages</a>--}}
+{{--                <ul class="dropdown-menu">--}}
+{{--                  <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>--}}
+{{--                  <li class="nav-item"><a class="nav-link" href="tracking-order.html">Tracking</a></li>--}}
+{{--                </ul>--}}
+{{--              </li>--}}
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
               <li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li>
+                @guest
+                    <li class="nav-item"><a class="nav-link" href="{{url('/login')}}">Login </a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/register')}}">Register</a></li>
+
+                @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                @endguest
             </ul>
 
             <ul class="nav-shop">
@@ -64,7 +86,7 @@
                         </button>
                     </a>
                 </li>
-            </ul>            
+            </ul>
           </div>
         </div>
       </nav>

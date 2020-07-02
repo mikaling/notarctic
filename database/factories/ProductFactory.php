@@ -28,6 +28,6 @@ $factory->define(Product::class, function (Faker $faker) {
         'quantity' => $faker->randomDigitNotNull,
         'brand' => Str::random(10),
         //'path' => $faker->image('public/storage/images',640, 480, null, false) ,
-        'path' => $faker->image('{{asset("storage/images/}}', 640, 480, null, false),
+        'path' => $faker->image(public_path('/storage/images'), 640, 480, null, false),
     ];
 });
