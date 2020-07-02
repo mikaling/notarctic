@@ -29,14 +29,14 @@
             <div class="row s_product_inner">
                 <div class="col-lg-6">
                     <div>
-                        <img src="{{ asset("storage/images/$product->path") }}" height="400" width="400" class"img-fluid" alt="">
+                        <a href="description/{{ $product->id }}"><img src="{{ asset("storage/images/$product->path") }}" height="400" width="400" class"img-fluid" alt=""></a>
                     </div>
                 </div>
 
                 <div class="col-lg-5 offset-lg-1">
 
                     <div class="s_product_text">
-                        <h3>{{$product->name}}</h3>
+                        <h3><a href="description/{{ $product->id }}">{{$product->name}}</a> </h3>
                         <h2>Ksh {{$product->price}}</h2>
                         <ul class="list">
                             <li><a class="active" href="/categories/{{$product->category->id }}"><span>Category</span> : {{$product->category->name}}</a></li>
