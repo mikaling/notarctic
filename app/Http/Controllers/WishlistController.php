@@ -67,7 +67,12 @@ class WishlistController extends Controller
     {
         $wishlists=\App\Wishlist::where('user_id',$id)->first();
 
-        $products = $wishlists->products;
+        if ($wishlists == null) {
+            $products = null;
+        } else {
+            $products = $wishlists->products;
+        }
+
         return view('wishlist',compact('products'));
     }
 

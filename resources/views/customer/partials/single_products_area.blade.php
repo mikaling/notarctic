@@ -26,7 +26,7 @@
 
                         <form action={{ route('cart.store', $product) }} method="POST">
                             {{ csrf_field() }}
-                     
+
                             <button type="submit" class="button button-header">Add to cart</button>
                         </form>
 
@@ -34,7 +34,7 @@
                         <form method="post" action="/wishlist" enctype="multipart/form-data" >
                             {{ csrf_field() }}
                             <input type="hidden" name="product_id" value="{{$product->id}}"/>
-                            <input type="hidden" name="user_id" value="5"/>
+                            <input type="hidden" name="user_id" value="{{ Auth::user()->id }}"/>
                             <button onclick="toggleClass()" type="submit" style="border-radius:50%;color: red" class="icon_btn wishlist">
                                 <i class="fas fa-heart"></i>
                             </button>

@@ -54,8 +54,16 @@
                             Add to cart
                             </button>
                         <div class="card_area d-flex align-items-center">
-                            <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
-                            <a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
+                            <form method="post" action="/wishlist" enctype="multipart/form-data" >
+                                {{ csrf_field() }}
+                                <input type="hidden" name="product_id" value="{{$product->id}}"/>
+                                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}"/>
+                                <button onclick="toggleClass()" type="submit" style="border-radius:50%;color: red" class="icon_btn wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+
+
+                            </form>
                         </div>
                     </div>
 
