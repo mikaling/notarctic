@@ -12,8 +12,10 @@ class ProductsController extends Controller
     //
 
     public function homePageProducts() {
-        $products=Product::all();
-        return view('home',compact('products'));
+        $top_products=Product::all()->random(3);
+        $trending=Product::all()->random(8);
+        $other_trending=Product::all()->random(8);
+        return view('home',compact('top_products','trending','other_trending'));
     }
 
     public function displayByCategory() {

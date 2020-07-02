@@ -16,6 +16,7 @@ class CreateProductsTable extends Migration
         Schema::create('product', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('category_id');
+            $table->string('image_path');
             $table->string('name');
             $table->integer('price');
             $table->text('description');
@@ -75,6 +76,8 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
+
+        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=0');
         Schema::dropIfExists('product');
         Schema::dropIfExists('product_wishlist');
         Schema::dropIfExists('product_purchase');

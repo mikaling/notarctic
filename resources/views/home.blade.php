@@ -44,15 +44,6 @@
    @include('customer.partials.offers')
     <!-- ================ offer section end ================= -->
 
-    <!-- ================ Best Selling item  carousel ================= -->
-    @include('customer.partials.best_selling')
-    <!-- ================ Best Selling item  carousel end ================= -->
-
-    <!-- ================ Blog section start ================= -->
-    <!-- ================ Blog section end ================= -->
-
-    <!-- ================ Subscribe section start ================= -->
-    <!-- ================ Subscribe section end ================= -->
 
 
 </main>
@@ -72,5 +63,4 @@
 <script src="{{asset('vendors/jquery.ajaxchimp.min.js')}}"></script>
 <script src="{{asset('vendors/mail-script.js')}}"></script>
 <script src="js/main.js"></script>
-</body>
-</html>
+
