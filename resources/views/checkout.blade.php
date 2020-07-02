@@ -134,6 +134,7 @@
                                 <li><a href="#">Shipping <span>Flat rate: $50.00</span></a></li>
                                 <li><a href="#">Total <span>$2210.00</span></a></li>
                             </ul>
+                            <!--MPESA-->
                             <form action="api/mpesa/push" method="post">
                                 <div class="payment_item">
                                     <div class="radion_btn">
@@ -145,8 +146,13 @@
                                     <p>Pay via MPESA. (Enter your number in the format 2547xxxxxx)</p>
 
                                     <input id="number" class="form-control" type="tel" name="number">
+                                    <br>
+                                    <div class="text-center">
+                                    <button class="button button-login" type="submit" value="submit">Pay via M-Pesa</button>
+                                    </div>
                                 </div>
                                 </form>
+                                <!--PAYPAL-->
                                 <div class="payment_item active">
                                     <div class="radion_btn">
                                         <input type="radio" id="f-option6" name="selector">
@@ -154,14 +160,17 @@
                                         <img src="{{ asset('templateresources/img/product/card.jpg') }}" alt="">
                                         <div class="check"></div>
                                     </div>
-                                    <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal
-                                        account.</p>
-                                        <form action="{{ url('charge') }}" method="post">
-                                    <input type="text" name="amount" />
+                                    <p>Pay via PayPal; you can pay with your paypal account.</p>
+                                    <form action="{{ url('charge') }}" method="post">
+                                    <input type="text" class="form-control" name="amount" />
                                     {{ csrf_field() }}
-                                    <input type="submit" name="submit" value="Pay Now">
+                                    <br>
+                                    <div class="text-center">
+                                    <input type="submit" name="submit" class="button button-login" value="Pay via PayPal">
+                                    </div>
                                 </form>
                                 </div>
+                                <!--CREDIT CARD-->
                                 <div class="payment_item">
                                     <div class="radion_btn">
                                         <input type="radio" id="f-option5" name="selector">
@@ -169,10 +178,10 @@
                                         <div class="check"></div>
                                     </div>
                                     
-                                    <p>Pay via Credit Card. </p>
+                                    <p>Pay via Credit/Debit Card. Acceptable cards include Visa, MasterCard and American Express. </p>
 
                                     <div class="text-center">
-                                    <a href="{{ url('/stripepayment') }}" class="button button-login">Pay</a>
+                                    <a href="{{ url('/stripepayment') }}" class="button button-login">Pay via Credit/Debit Card</a>
                                 </div>
                                 
                                 </div>

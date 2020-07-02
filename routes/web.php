@@ -42,4 +42,6 @@ Route::get('checkout', function () {
 });
 // TODO: POST method checkout route
 
-
+Route::get('afterpayment', function () {
+    return view('afterpayment');
+});

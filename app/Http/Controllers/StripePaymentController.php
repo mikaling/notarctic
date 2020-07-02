@@ -21,7 +21,7 @@ class StripePaymentController extends Controller
         if ($request->input('stripeToken')) {
   
             $gateway = Omnipay::create('Stripe');
-            $gateway->setApiKey('');//enter api key
+            $gateway->setApiKey('sk_test_51GuiySDSVAZTTXtTiNqqQ5uupiXdXJyec1NFapU7x3OBjHGbu6RPIooqZkqovEaBgW8zYVOj8OxuJIglxGBfLp5N00Gj0kTc6x');
           
             $token = $request->input('stripeToken');
           
@@ -48,7 +48,7 @@ class StripePaymentController extends Controller
                     $payment->save();
                 }
  
-                return "Payment is successful. Your payment id is: ". $arr_payment_data['id'];
+                return redirect('afterpayment');
             } else {
                 // payment failed: display message to customer
                 return $response->getMessage();
