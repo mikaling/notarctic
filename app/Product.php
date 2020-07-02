@@ -27,6 +27,9 @@ class Product extends Model implements Buyable
     {
         return $this->belongsTo(Category::class);
     }
+    public function wishlist(){
+        return $this->belongsTo(Wishlist::class);
+    }
 
     public function reviews() {
         return $this->hasMany(Review::class);

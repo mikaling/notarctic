@@ -50,7 +50,7 @@ Route::patch('/cart/{rowId}', 'CartController@update')->name('cart.update');
 
 //Route::get('products/{cat_id}','ProductsController@productDescription');
 
-//Route::resource('/products','ProductsController');
+Route::resource('wishlist','WishlistController')->middleware('auth');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

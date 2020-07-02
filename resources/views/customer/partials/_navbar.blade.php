@@ -74,7 +74,13 @@
                         <input type="text" name="query" id="query"  class="search-box" placeholder="Search for products...">
                     </form>
                 </li>
+{{--                {{Auth::user()->id}}--}}
+                @guest
 
+                    @else
+
+                    <li class="nav-item"><button> <a class="icon_btn" href="/wishlist/{{Auth::user()->id}}"><i class="lnr lnr lnr-heart"></i></a></button></li>
+                @endguest
                 <li class="nav-item">
                     <a href="{{ route('cart.index') }}" class="button button-header">
                         <b>Cart </b>

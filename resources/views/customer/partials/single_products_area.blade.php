@@ -23,36 +23,24 @@
                         <li><a href="#"><span>Availibility</span> {{$product->quantity>1 ? ": In Stock" :": Out of Stock!"}}</a></li>
                     </ul>
                     <p>{{$product->description}}</p>
-                    {{-- <div class="product_count"> --}}
-                        {{-- <label for="qty">Quantity:</label>
-                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                class="increase items-count" type="button"><i class="ti-angle-left"></i></button>
-                        <input type="text" name="qty" id="sst" size="2" maxlength="12" value="1" title="Quantity:" class="input-text qty">
-                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                class="reduced items-count" type="button"><i class="ti-angle-right"></i></button> --}}
-                        <!-- <a class="button primary-btn" href="#">Add to Cart</a> -->
-                        {{-- <button class="snipcart-add-item button button-header"
-                        data-item-id="{{$product->id}}"
-                        data-item-price="{{$product->price}}"
-                        data-item-url="/description/{{$product->id}}"
-                        data-item-description="{{$product->description}}"
-                        data-item-image="{{asset('storage/images/$products->path')}}"
-                        data-item-name="{{$product->name}}">
-                        Add to cart
-                        </button> --}}
+
                         <form action={{ route('cart.store', $product) }} method="POST">
                             {{ csrf_field() }}
-                            {{-- <input type="hidden" name="id" value="{{ $product->id }}">
-                            <input type="hidden" name="name" value="{{ $product->name }}">
-                            <input type="hidden" name="price" value="{{ $product->price }}"> --}}
+
                             <button type="submit" class="button button-header">Add to cart</button>
                         </form>
-                    {{-- <a href="{{ route('cart.store', $product->id) }}" class="button button-header">Add to cart</a> --}}
-                    {{-- </div> --}}
 
                     <div class="card_area d-flex align-items-center">
-                        <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
-                        <a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
+                        <form method="post" action="/wishlist" enctype="multipart/form-data" >
+                            {{ csrf_field() }}
+                            <input type="hidden" name="product_id" value="{{$product->id}}"/>
+                            <input type="hidden" name="user_id" value="{{ Auth::user()->id }}"/>
+                            <button onclick="toggleClass()" type="submit" style="border-radius:50%;color: red" class="icon_btn wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+
+
+                        </form>
                     </div>
                 </div>
 
