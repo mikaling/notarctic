@@ -12,10 +12,10 @@ class ProductsController extends Controller
     //
 
     public function homePageProducts() {
-        $top_products=Product::all()->random(3);
-        $trending=Product::all()->random(8);
-        $other_trending=Product::all()->random(8);
-        return view('home',compact('top_products','trending','other_trending'));
+//        $top_products=Product::all()->random(3);
+        $trending=Product::all()->random(4);
+        $other_trending=Product::all()->random(12);
+        return view('home',compact('trending','other_trending'));
     }
 
     public function displayByCategory() {
@@ -25,6 +25,18 @@ class ProductsController extends Controller
         return view('category',compact('category'));
     }
 
+    public function addQuantity($id) {
+        $product = Product::where('id', $id)->take(1)->get();
+        $product->quantity += 1;
+        $product->save();
+
+    }
+
+    public function reduceQuantity($id) {
+        $product = Product::where('id', $id)->take(1)->get();
+        $product->quantity -= 1;
+        $product->save();
+    }
 
     public function productDescription($id) {
         $product = Product::where('id', $id)->get();

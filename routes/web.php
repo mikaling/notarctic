@@ -43,10 +43,10 @@ Route::get('/categories/{category}','ProductsController@show');
 
 Route::get('/search', 'ProductsController@showSearchResults')->name('search');
 
-Route::get('/cart', 'CartController@index')->name('cart.index');
-Route::post('/cart/{product}', 'CartController@store')->name('cart.store');
-Route::delete('/cart/{rowId}', 'CartController@remove')->name('cart.remove');
-Route::patch('/cart/{rowId}', 'CartController@update')->name('cart.update');
+Route::get('/cart', 'CartController@index')->name('cart.index')->middleware('auth');
+Route::post('/cart/{product}', 'CartController@store')->name('cart.store')->middleware('auth');
+Route::delete('/cart/{rowId}', 'CartController@remove')->name('cart.remove')->middleware('auth');
+Route::patch('/cart/{rowId}', 'CartController@update')->name('cart.update')->middleware('auth');
 
 //Route::get('products/{cat_id}','ProductsController@productDescription');
 

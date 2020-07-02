@@ -47,6 +47,21 @@ class Product extends Model implements Buyable
         return $this->price;
     }
 
+    public static function addQuantity($id) {
+        $product = self::where('id', $id)->take(1)->first();
+        $product->quantity += 1;
+//        dd($product);
+        $product->save();
+
+    }
+
+    public static function reduceQuantity($id) {
+        $product = self::where('id', $id)->take(1)->first();
+//        dd($product);
+        $product->quantity -= 1;
+        $product->save();
+    }
+
 
     //TODO: Set up searchable array of fields
     // public function toSearchableArray() {

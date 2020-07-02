@@ -32,7 +32,7 @@
     <!--================ Hero banner finish =================-->
 
     <!--================ Hero Carousel start =================-->
-    @include('customer.partials.top_items')
+{{--    @include('customer.partials.top_items')--}}
     <!--================ Hero Carousel end =================-->
 
     <!-- ================ trending product section start ================= -->

@@ -20,12 +20,16 @@ class CartController extends Controller
         if($duplicate->isNotEmpty())
             return redirect()->route('cart.index')->with('success_message', 'Item is already in your cart');
         Cart::add($product, 1);
+//        Product::reduceQuantity($product->id);
+        $product->reduceQuantity($product->id);
         return redirect()->route('cart.index')
             ->with('success_message', 'Item added to cart!');
     }
 
     public function remove($rowId) {
+        $product = Cart::get($rowId);
         Cart::remove($rowId);
+        Product::addQuantity($product->id);
         return back()->with('success_message', 'Item removed from cart');
     }
 
