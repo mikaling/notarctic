@@ -145,6 +145,10 @@
                                     <p>Pay via MPESA. (Enter your number in the format 2547xxxxxx)</p>
 
                                     <input id="number" class="form-control" type="tel" name="number">
+                                    <br>
+                                    <div class="text-center">
+                                    <input type="submit" class="button button-login"name="submit" value="Pay via M-Pesa">
+                                    </div>
                                 </div>
                                 </form>
                                 <div class="payment_item active">
@@ -157,9 +161,12 @@
                                     <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal
                                         account.</p>
                                         <form action="{{ url('charge') }}" method="post">
-                                    <input type="text" name="amount" />
+                                    <input type="text" class="form-control" name="amount" />
                                     {{ csrf_field() }}
-                                    <input type="submit" name="submit" value="Pay Now">
+                                    <br>
+                                    <div class="text-center">
+                                    <input type="submit" class="button button-login"name="submit" value="Pay via Paypal">
+                                    </div>
                                 </form>
                                 </div>
                                 <div class="payment_item">
@@ -172,7 +179,7 @@
                                     <p>Pay via Credit Card. </p>
 
                                     <div class="text-center">
-                                    <a href="{{ url('/stripepayment') }}" class="button button-login">Pay</a>
+                                    <a href="{{ url('/stripepayment') }}" class="button button-login">Pay with Credit Card</a>
                                 </div>
                                 
                                 </div>
