@@ -63,7 +63,7 @@
                                 </td>
                                 <td>
                                     <select class="prdqty" data-id="{{ $item->rowId }}">
-                                        @for ($i = 1; $i <= 5; $i++)
+                                        @for ($i = 1; $i <= \App\Product::getQuantity($item->model->id); $i++)
                                             <option {{ $item->qty == $i ? 'selected' : '' }}>{{ $i }}</option>
                                         @endfor
                                     </select>

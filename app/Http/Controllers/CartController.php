@@ -28,8 +28,9 @@ class CartController extends Controller
 
     public function remove($rowId) {
         $product = Cart::get($rowId);
+//        dd($product);
         Cart::remove($rowId);
-        Product::addQuantity($product->id);
+        Product::addQuantity($product->id, $product->qty);
         return back()->with('success_message', 'Item removed from cart');
     }
 

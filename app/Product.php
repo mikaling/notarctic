@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Category;
 use App\Review;
 use Gloudemans\Shoppingcart\Contracts\Buyable;
+use phpDocumentor\Reflection\Types\Self_;
 
 class Product extends Model implements Buyable
 {
@@ -47,9 +48,9 @@ class Product extends Model implements Buyable
         return $this->price;
     }
 
-    public static function addQuantity($id) {
+    public static function addQuantity($id, $qty) {
         $product = self::where('id', $id)->take(1)->first();
-        $product->quantity += 1;
+        $product->quantity += $qty;
 //        dd($product);
         $product->save();
 
@@ -60,6 +61,11 @@ class Product extends Model implements Buyable
 //        dd($product);
         $product->quantity -= 1;
         $product->save();
+    }
+
+    public static function getQuantity($id) {
+        $product = self::where('id', $id)->take(1)->first();
+        return $product->quantity;
     }
 
 
