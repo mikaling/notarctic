@@ -51,7 +51,21 @@ Route::patch('/cart/{rowId}', 'CartController@update')->name('cart.update')->mid
 //Route::get('products/{cat_id}','ProductsController@productDescription');
 
 Route::resource('wishlist','WishlistController')->middleware('auth');
+Route::post('charge', 'PaymentController@charge');
+Route::get('paymentsuccess', 'PaymentController@payment_success');
+Route::get('paymenterror', 'PaymentController@payment_error');
 
+Route::post('/stripecharge', 'StripePaymentController@charge');
+Route::get('/stripepayment', 'StripePaymentController@index');
+
+Route::get('checkout', function () {
+    return view('checkout');
+});
+// TODO: POST method checkout route
+
+Route::get('afterpayment', function () {
+    return view('afterpayment');
+});
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
