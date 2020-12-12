@@ -21,7 +21,7 @@ use Illuminate\Support\Str;
 
 $factory->define(Product::class, function (Faker $faker) {
     return [
-        'category_id'=>$faker->numberBetween($min=1,$max=6),
+        'category_id'=>$faker->numberBetween($min=1,$max=4),
         'name' => $faker->word,
         'price' => $faker->randomDigit,
         'description' =>$faker->realText(180),
